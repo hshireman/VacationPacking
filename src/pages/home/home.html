@@ -1,17 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <p style ="text-align:center"><ion-title>iVacation Home</ion-title></p>
+    <ion-item>
+      <ion-label>Date</ion-label>
+
+      <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+<ion-content padding class="home">
+
+  <h2 style="text-align:center">Welcome to iVacation</h2>
+  <p style="text-align:center">
+    Our app will help you stay organized for you vacation.
+    Make a checklist of all the things you want to do while in the area!
   </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <p style="text-align:center"><ion-img width="300" height="400" src="https://i.pinimg.com/736x/a3/35/63/a335637c9076e9001b0111d41ba018ad.jpg"></ion-img></p>
+
+  
+
 </ion-content>

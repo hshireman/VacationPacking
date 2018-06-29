@@ -1,11 +1,52 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      What to Pack
     </ion-title>
+    <button ion-button icon-left (click)="addItem()"><ion-icon name="add"></ion-icon> Add Item</button>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    
+    <ion-item-sliding *ngFor="let task of tasks" #slidingItem>
+      <ion-item [ngClass]="{taskDone: task.status == 'done'}">{{task.title}}</ion-item>
+      
+    <ion-item-options side="right">
+      <button ion-button icon-only (click)="markAsDone(slidingItem,task)" color="secondary">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="removeTask(slidingItem,task)" color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    
 
+    </ion-item-options>
+    </ion-item-sliding>
+  
+  </ion-list>
+  <ion-list>
+    <ion-label color="dark">DON'T FORGET</ion-label>
+    <ion-item>
+      <ion-label>Unplug Appliances</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+        <ion-label>Stop Mail</ion-label>
+        <ion-checkbox color="dark" checked="true"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+          <ion-label>Pack Tickets</ion-label>
+          <ion-checkbox color="dark" checked="true"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Give A Key to Neighbor</ion-label>
+            <ion-checkbox color="dark" checked="true"></ion-checkbox>
+          </ion-item>
+  </ion-list>
+  
+
+  
 </ion-content>

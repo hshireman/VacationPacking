@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var config = {
+    apiKey: "AIzaSyBG_msP6Jy1_jnnDkLVLE84zKEE1AOiYjc",
+    authDomain: "ivacation-40170.firebaseapp.com",
+    databaseURL: "https://ivacation-40170.firebaseio.com",
+    projectId: "ivacation-40170",
+    storageBucket: "ivacation-40170.appspot.com",
+    messagingSenderId: "160556671670"
+  };
+  firebase.initializeApp(config);
+</script>
   <meta charset="UTF-8">
   <title>Ionic App</title>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,6 +29,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <script src="js/ng-cordova.min.js"></script>
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
 
